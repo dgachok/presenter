@@ -1,0 +1,15 @@
+<form (ngSubmit)="submitMessage(messageForm)" [formGroup]="messageForm">
+  <div class="form-group">
+    <label for="sender">Sender</label>
+    <input formControlName="sender" type="text" class="form-control" id="sender">
+  </div>
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea formControlName="text" class="form-control" id="message" rows="3"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="image">Upload image</label>
+    <input (change)="onUploadFile($event)" type="file" class="form-control-file" id="image">
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Save</button>
+</form>

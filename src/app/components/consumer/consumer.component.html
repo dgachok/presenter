@@ -1,0 +1,12 @@
+<div *ngFor="let message of messages"
+     (click)="selectMessage(message)"
+     [class.card--chosen]="message?.id === selectedMessage?.id"
+     class="card cursor-pointer mt-md-2">
+  <img class="card-img-top card__image"
+       [src]="message?.attachment"
+       alt="Message image">
+  <div class="card-body">
+    <h5 class="card-title">{{message?.sender}}</h5>
+    <p class="card-text">{{message?.text}}</p>
+  </div>
+</div>
