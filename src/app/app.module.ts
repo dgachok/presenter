@@ -7,6 +7,7 @@ import {PresenterComponent} from './components/presenter/presenter.component';
 import {ConsumerComponent} from './components/consumer/consumer.component';
 import {AppService} from "./services/app.service";
 import {ReactiveFormsModule} from "@angular/forms";
+import {NgDatepickerModule} from "ng2-datepicker";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {ReactiveFormsModule} from "@angular/forms";
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgDatepickerModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
